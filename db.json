@@ -1,0 +1,109 @@
+{
+  "restaurants": [
+    {
+      "id": 1,
+      "resName": "Biryani House",
+      "star": 4.5,
+      "img": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/heax0zmm6mvyk58cpa7p",
+      "promoted": false
+    },
+    {
+      "id": 2,
+      "resName": "Pizza Palace",
+      "star": 4.2,
+      "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQf43HHkxMifdLowHlt8lH1uZoITAGDgEBBHw&s",
+      "promoted": false
+    },
+    {
+      "id": 3,
+      "resName": "Burger Hub",
+      "star": 4.0,
+      "img": "https://www.foodandwine.com/thmb/XE8ubzwObCIgMw7qJ9CsqUZocNM=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/MSG-Smash-Burger-FT-RECIPE0124-d9682401f3554ef683e24311abdf342b.jpg",
+      "promoted": false
+    },
+    {
+      "id": 4,
+      "resName": "Momo Junction",
+      "star": 4.3,
+      "img": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/7/14/31396e56-6d39-4385-8462-1c900a339f81_923236.jpg",
+      "promoted": false
+    },
+    {
+      "id": 5,
+      "resName": "South Spice",
+      "star": 4.6,
+      "img": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/11/13/326b795f-f687-4996-afd1-eeee3a7a7933_989552.jpg",
+      "promoted": true
+    },
+    {
+      "id": 6,
+      "resName": "Tandoori Treats",
+      "star": 4.1,
+      "img": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/dcfe2edf703b0669d5e885622fb5aa07",
+      "promoted": false
+    },
+    {
+      "id": 7,
+      "resName": "Chinese Wok",
+      "star": 3.9,
+      "img": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/z9pqrhwetmv6vnap2aat",
+      "promoted": false
+    },
+    {
+      "id": 8,
+      "resName": "Punjabi Dhaba",
+      "star": 4.4,
+      "img": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2025/4/11/ec4990c3-6c06-4d7b-8f78-c921ef43d2d1_1077772.jpg",
+      "promoted": false
+    },
+    {
+      "id": 9,
+      "resName": "Kebab King",
+      "star": 4.0,
+      "img": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/7/8/4d9b13e7-7f5e-4577-8f6e-a8039706dc4a_922255.JPG",
+      "promoted": true
+    },
+    {
+      "id": 10,
+      "resName": "Veg Delight",
+      "star": 4.2,
+      "img": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2024/10/23/4311f7ab-f07d-47c1-b364-66fc611466ab_979016.jpg",
+      "promoted": false
+    },
+    {
+      "id": 11,
+      "resName": "Roll Express",
+      "star": 3.8,
+      "img": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2025/4/20/c59e4a6f-a003-44b7-81bb-cb116c681b67_1082616.jpg",
+      "promoted": false
+    },
+    {
+      "id": 12,
+      "resName": "Cafe Coffee Time",
+      "star": 4.1,
+      "img": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/drbisy45q0eczkalk6fr",
+      "promoted": false
+    },
+    {
+      "id": 13,
+      "resName": "Street Food Adda",
+      "star": 4.3,
+      "img": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2025/3/16/b85008ea-eb61-499a-af27-4ffc1fc22ade_1064198.JPG",
+      "promoted": false
+    },
+    {
+      "id": 14,
+      "resName": "Ice Cream Factory",
+      "star": 4.5,
+      "img": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/RX_THUMBNAIL/IMAGES/VENDOR/2025/9/26/a7590085-de47-408c-8115-63d8185c422b_1217946.jpg",
+      "promoted": false
+    },
+    {
+      "id": 15,
+      "resName": "Healthy Bites",
+      "star": 4.0,
+      "img": "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/cf91af0ad62b20612678a67b324401b3",
+      "promoted": false
+    }
+  ]
+}
