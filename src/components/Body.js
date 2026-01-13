@@ -4,6 +4,7 @@ import Shimmer from "./shimmer";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
 import { BASE_URL } from "../utils/Fallback";
+import { HomesShimmer } from "./HomesShimmer";
 const Body = () => {
   const [listofres, setlistofres] = useState([]);
   const [filterlist, setliterlist] = useState([]);
@@ -27,7 +28,7 @@ const Body = () => {
     return <h1>No Internet ! Please fix the connnection</h1>;
   }
   if (listofres.length === 0) {
-    return <Shimmer />;
+    return <HomesShimmer />;
   }
   
   return ( 
