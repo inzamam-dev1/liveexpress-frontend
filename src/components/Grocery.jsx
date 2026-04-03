@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { addItem } from "../utils/cartSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { addItem, removeItem } from "../utils/cartSlice";
 import { FALLBACK_IMG } from "../utils/Fallback";
 
 const Grocery = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const dispatch = useDispatch();
+  const cartItems = useSelector((store) => store.cart.items);
 
   const groceryItems = [
     {
@@ -114,10 +115,6 @@ const Grocery = () => {
 
   const categories = ["All", ...new Set(groceryItems.map((item) => item.category))];
 
-  const handleAddToCart = (item) => {
-    dispatch(addItem(item));
-  };
-
   return (
     <div className="grocery-page">
       <div className="grocery-header">
@@ -153,12 +150,35 @@ const Grocery = () => {
               <div className="grocery-info">
                 <h3>{item.name}</h3>
                 <p className="grocery-price">₹{item.price}</p>
-                <button
-                  className="add-to-cart-btn"
-                  onClick={() => handleAddToCart(item)}
-                >
-                  Add to Cart
-                </button>
+                {(() => {
+                  const foundItem = cartItems.find((cartItem) => cartItem.id === item.id);
+                  const quantity = foundItem ? foundItem.quantity : 0;
+
+                  return quantity === 0 ? (
+                    <button
+                      className="add-to-cart-btn"
+                      onClick={() => dispatch(addItem(item))}
+                    >
+                      Add to Cart
+                    </button>
+                  ) : (
+                    <div className="grocery-qty-counter">
+                      <button
+                        className="grocery-qty-btn minus"
+                        onClick={() => dispatch(removeItem(item.id))}
+                      >
+                        −
+                      </button>
+                      <span className="grocery-qty-display">{quantity}</span>
+                      <button
+                        className="grocery-qty-btn plus"
+                        onClick={() => dispatch(addItem(item))}
+                      >
+                        +
+                      </button>
+                    </div>
+                  );
+                })()}
               </div>
             </div>
           ))

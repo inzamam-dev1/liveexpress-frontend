@@ -1,7 +1,31 @@
+import { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { addItem, removeItem } from "../components/../utils/cartSlice";
 import { FALLBACK_IMG } from "./Fallback";
-const MenuItem = ({ item, onAdd }) => {
 
- 
+const MenuItem = ({ item, onAdd }) => {
+  const dispatch = useDispatch();
+  const cartItems = useSelector((store) => store.cart.items);
+  
+  const cartItem = cartItems.find((cartItem) => cartItem.id === item.id);
+  const quantity = cartItem ? cartItem.quantity : 0;
+
+  const handleAdd = () => {
+    if (onAdd) {
+      onAdd(item);
+    } else {
+      dispatch(addItem(item));
+    }
+  };
+
+  const handleIncrease = () => {
+    dispatch(addItem(item));
+  };
+
+  const handleDecrease = () => {
+    dispatch(removeItem(item.id));
+  };
+
   return (
     <div className="menu-row">
       {/* LEFT SIDE */}
@@ -13,10 +37,28 @@ const MenuItem = ({ item, onAdd }) => {
 
       {/* RIGHT SIDE */}
       <div className="menu-right">
-        {onAdd && (
-          <button className="add-btn" onClick={() => onAdd(item)}>
+        {quantity === 0 ? (
+          <button className="add-btn" onClick={handleAdd}>
             ADD
           </button>
+        ) : (
+          <div className="quantity-counter">
+            <button 
+              className="qty-minus-btn"
+              onClick={handleDecrease}
+              title="Decrease quantity"
+            >
+              −
+            </button>
+            <span className="qty-count">{quantity}</span>
+            <button 
+              className="qty-plus-btn"
+              onClick={handleIncrease}
+              title="Increase quantity"
+            >
+              +
+            </button>
+          </div>
         )}
         <img src={item.img} onError={(e)=>{e.currentTarget.onerror = null;
           e.currentTarget.src = FALLBACK_IMG;
